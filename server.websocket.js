@@ -15,8 +15,8 @@ let wss = new WSServer({
 wss.on('connection', function connection(ws) {
  
   ws.on('message', function incoming(message) {
-    
-    console.log(`received: ${message}`);
+    let msg = JSON.parse(message)
+    console.log(msg);
     
     ws.send(JSON.stringify({
 
