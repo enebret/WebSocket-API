@@ -22,6 +22,10 @@ wss.on('connection', function connection(ws) {
 
       answer: 41344
     }));
+
+    ws.on('close', function close() {
+      console.log('disconnected');
+    });
   });
 });
 
